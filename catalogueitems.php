@@ -1,4 +1,5 @@
 <?php include('header.php'); ?>
+<?php include('multidimensional-catalog.php');?>
 
 <div class="container text-center mt-5 mb-5">
         <h1><strong>Catalogue</strong></h1>
@@ -19,11 +20,10 @@
             </div>
 
             <div class="col-md-6 col-lg-3">
-                <h2>Site Web</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, corrupti laudantium optio repellat,
-                    neque sint nemo dolorum alias minus corporis maxime qui ullam numquam. Omnis asperiores consectetur
-                    dignissimos culpa nam.</p>
-                <a href="siteweb.php"><img src="images/sitewebb.png" class="img-fluid rounded mb-5 w-100 h-50"
+                <h2><?php echo $sous_siteweb['name']; ?></h2>
+                <p>prix = <?php echo $sous_siteweb['price']; ?>€</p>
+                <p>poids = <?php echo $sous_siteweb['weight']; ?>g</p>
+                <a href="siteweb.php"><img src="<?php echo $sous_siteweb['picture']; ?>" class="img-fluid rounded mb-5 w-100 h-50"
                         alt="sitewebb"></a>
             </div>
 
@@ -63,11 +63,10 @@
             </div>
 
             <div class="col-md-6 col-lg-3">
-                <h2>Bob</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, corrupti laudantium optio repellat,
-                    neque sint nemo dolorum alias minus corporis maxime qui ullam numquam. Omnis asperiores consectetur
-                    dignissimos culpa nam.</p>
-                <a href="bob.php"><img src="images/bob.png" class="img-fluid rounded mb-5" alt="Bob"></a>
+            <h2><?php echo $sous_bob['name']; ?></h2>
+                <p>prix = <?php echo $sous_bob['price']; ?>€</p>
+                <p>poids = <?php echo $sous_bob['weight']; ?>ko</p>
+                <a href="bob.php"><img src="<?php echo $sous_bob['picture']; ?>" class="img-fluid rounded mb-5" alt="Bob"></a>
             </div>
 
             <div class="col-md-6 col-lg-3">
@@ -79,11 +78,10 @@
             </div>
 
             <div class="col-md-6 col-lg-3">
-                <h2>TGV</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, corrupti laudantium optio repellat,
-                    neque sint nemo dolorum alias minus corporis maxime qui ullam numquam. Omnis asperiores consectetur
-                    dignissimos culpa nam.</p>
-                <a href="tgv.php"><img src="images/tgv.png" class="img-fluid rounded mb-5" alt="TGV"></a>
+            <h2><?php echo $sous_tgv['name']; ?></h2>
+                <p>prix = <?php echo $sous_tgv['price']; ?>€</p>
+                <p>poids = <?php echo $sous_tgv['weight']; ?>mg</p>
+                <a href="tgv.php"><img src="<?php echo $sous_tgv['picture']; ?>" class="img-fluid rounded mb-5" alt="TGV"></a>
             </div>
 
         </div>
