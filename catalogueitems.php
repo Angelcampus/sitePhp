@@ -1,6 +1,5 @@
 <?php include('header.php'); ?>
 <?php include('multidimensional-catalog.php');?>
-
 <div class="container text-center mt-5 mb-5">
         <h1><strong>Catalogue</strong></h1>
     </div>
@@ -15,9 +14,11 @@
     <?php foreach ($products as $objet => $product): ?>
         <div class="col-md-6 col-lg-3">
             <h2><?php echo $product['name']; ?></h2>
-            <p>Prix : <?php echo $product['price']; ?></p>
+            <p>Prix TTC : <?php echo $product['priceTtc']; ?></p>
+            <p>Prix HT: <?php echo $product['priceHt']; ?></p>
             <p>Poids : <?php echo $product['weight']; ?> mg</p>
             <p>Remise : <?php echo $product['discount']; ?> %</p>
+            <p>Prix avec remise : <?php echo $product['remiseDiscount']; ?> </p>
             <a href="<?php echo $objet ?>.php">
                 <img src="<?php echo $product['picture']; ?>" class="img-fluid rounded mb-5" alt="<?php echo $product['name']; ?>">
             </a>

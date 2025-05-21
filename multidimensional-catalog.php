@@ -1,24 +1,34 @@
+<?php include('my-functions.php')?>
 <?php 
 $products = [
    'siteweb' => [
+    $priceWeb=3200,
         "name" => "Site-Web",
-        "price" => 3200,
+        "priceTtc" => formatPrice($priceWeb),
+        "priceHt" => priceExcludingVAT($priceWeb),
         "weight" => 500,
-        "discount" => 5,
+        "discount" => $sitewebDiscount=5,
+        "remiseDiscount" => discountedPrice($priceWeb,$sitewebDiscount),
         "picture"=> "images/sitewebb.png"
     ],
     'tgv' => [
+        $priceTgv=45500000,
         "name" => "TGV",
-        "price" => 45500000,
+        "priceTtc" =>  formatPrice($priceTgv),
+        "priceHt" => priceExcludingVAT($priceTgv),
         "weight" => 10000,
-        "discount" => 1,
+        "discount" => $tgvDiscount=1,
+        "remiseDiscount" => discountedPrice($priceTgv,$tgvDiscount),
         "picture"=> "images/tgv.png"
     ],
     'bob' => [
+        $priceBob=7800,
         "name" => "BoB",
-        "price" => 42,
+        "priceTtc" => formatPrice($priceBob),
+        "priceHt" => priceExcludingVAT($priceBob),
         "weight" => 10,
-        "discount" => 69,
+        "discount" => $bobDiscount=69,
+        "remiseDiscount" => discountedPrice($priceBob,$bobDiscount),
         "picture"=> "images/bob.png"
     ],
 ];
